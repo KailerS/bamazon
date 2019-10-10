@@ -58,6 +58,16 @@ function askProduct (){
         if (answer.product === "exit"){
             connection.end();
         };
+
+        connection.query("SELECT * FROM products WHERE ?", {id: answer.product}, function (err, result){
+            if (err) throw (err);
+            
+            if(answer.quantity > result[0].stock_quantity || result[0].stock_quantity === 0){
+                console.log("There is not that many left in stock!");
+                return connection.end();
+            };
+            console.log(result[0]);
+        });
     });
 };
 
