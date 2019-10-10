@@ -47,7 +47,9 @@ function askProduct (){
         validate: function(answer) {
             if (isNaN(answer)) {
                 return "You must enter a number";
-            }
+            }else if (answer < 0){
+                return "The number must be positive"
+            };
             return true;
         }
 
