@@ -43,11 +43,19 @@ function askProduct (){
     {
         type: "input",
         message: "How many of that product would you like to buy?",
-        name: "quantity"
+        name: "quantity",
+        validate: function(answer) {
+            if (isNaN(answer)) {
+                return "You must enter a number";
+            }
+            return true;
+        }
 
     }
     ]).then(function (answer){
-        
+        if (answer.product === "exit"){
+            connection.end();
+        };
     });
 };
 
