@@ -11,3 +11,8 @@ This app was designed to show control of MySQL databases.
 1. After your total is displayed you will be asked if you would like to purchase another item.
     * if yes is selected you will see the table printed again with updated stock counts.
     * if no is selected (default) the app will end.
+
+**Link to watch it in action** **https://drive.google.com/file/d/1n5sW2uZpFmBr6rV9SE3P2TIrVZ97bagN/view**
+
+Included a picture not included in the video of selecting a quantity higher than instock returns a message saying not enough and letting you select again.
+![Proof of selecting over in-stock works](stock.jpg)
