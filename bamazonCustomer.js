@@ -64,7 +64,7 @@ function askProduct (){
 
             if(answer.quantity > result[0].stock_quantity || result[0].stock_quantity === 0){
                 console.log("There is not that many left in stock!");
-                return connection.end();
+                return viewAll();
             };
             quantity = result[0].stock_quantity - answer.quantity;           
             connection.query("UPDATE products SET ? WHERE ?", [{stock_quantity: quantity}, {id: answer.product}], function (err,result){
@@ -76,6 +76,7 @@ function askProduct (){
             inquirer.prompt({
                 type: "confirm",
                 message: "Would you like to buy another item?",
+                default: false,
                 name: "continue"
     
             }).then(function (answer){
