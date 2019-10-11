@@ -69,7 +69,23 @@ function askProduct (){
             quantity = result[0].stock_quantity - answer.quantity;           
             connection.query("UPDATE products SET ? WHERE ?", [{stock_quantity: quantity}, {id: answer.product}], function (err,result){
             });
-            console.log(`${quantity}`);
+            console.log(`There are only ${quantity} ${result[0].product_name} left!`);
+            var product = result[0].price * answer.quantity;
+            var total = product.toFixed(2);            
+            console.log(`Your total cost for this order is $${total}`);
+            inquirer.prompt({
+                type: "confirm",
+                message: "Would you like to buy another item?",
+                name: "continue"
+    
+            }).then(function (answer){
+                if (answer.continue){
+                    viewAll();
+                }else {
+                    return connection.end();
+                };
+    
+            });
         });
 
     });
