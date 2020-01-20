@@ -16,7 +16,7 @@ This app was designed to show control of MySQL databases.
 
 Included a picture not included in the video of selecting a quantity higher than instock returns a message saying not enough and letting you select again.
 ![Proof of selecting over in-stock works](stock.jpg)
-## Instalation 
+## Installation 
 This app requires a npm install of node
 
 ## Deployment 
