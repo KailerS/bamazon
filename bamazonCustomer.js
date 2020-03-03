@@ -49,6 +49,8 @@ const askProduct = () => {
                 return "You must enter a number";
             }else if (answer < 0){
                 return "The number must be positive"
+            }else if (!answer){
+                return "Please enter a quantity"
             };
             return true;
         }
