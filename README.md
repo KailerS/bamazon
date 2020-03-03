@@ -1,5 +1,7 @@
 # bamazon
 
+## Introduction 
+
 This app is a fake online shopping store to show the use of node with MySql.
 It allows users to select an item number an quantity and gives them the price.
 They will then get the choice to select a new item or exit.
