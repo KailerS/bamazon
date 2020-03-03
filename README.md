@@ -1,6 +1,8 @@
 # bamazon
 
-This app was designed to show control of MySQL databases.
+This app is a fake online shopping store to show the use of node with MySql.
+It allows users to select an item number an quantity and gives them the price.
+They will then get the choice to select a new item or exit.
 
 **To use this app**
 1. navigate to the folder its stored in and run a node bamazon.js.
