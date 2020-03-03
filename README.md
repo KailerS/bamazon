@@ -12,10 +12,19 @@ This app was designed to show control of MySQL databases.
     * if yes is selected you will see the table printed again with updated stock counts.
     * if no is selected (default) the app will end.
 
+## Screenshots
+This is what you see after running node bamazon.js:
+![Starting screen](startingScreen.png)
+
+This is the screen after selecting an item and buying an ammount that is in stock:
+![successful purchase](purchased.png)
+
+Selecting a quantity higher than instock returns a message saying not enough and letting you select again:
+
+![Proof of selecting over in-stock works](stock.jpg)
+
 **Link to watch it in action** **https://drive.google.com/file/d/1n5sW2uZpFmBr6rV9SE3P2TIrVZ97bagN/view**
 
-Included a picture not included in the video of selecting a quantity higher than instock returns a message saying not enough and letting you select again.
-![Proof of selecting over in-stock works](stock.jpg)
 ## Installation 
 This app requires a npm install of node
 
